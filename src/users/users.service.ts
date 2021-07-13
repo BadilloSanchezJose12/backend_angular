@@ -7,7 +7,7 @@ import { createSecureServer } from 'http2';
 @Injectable()
 export class UsersService {
 
-constructor(@InjectRepository(UserEntity) private rep,Repository<UserEntity>){
+constructor(@InjectRepository(UserEntity) private rep:Repository<UserEntity>){
 }
 
 async getAllUsers(): Promise <UserEntity[]> {
@@ -15,8 +15,8 @@ async getAllUsers(): Promise <UserEntity[]> {
 }
 
 
-async createSecureServer(user.UserEntity);{
-    await this.rep.insert();
+async createUser(user:UserEntity) {
+    await this.rep.insert(user);
 }
 
 }
