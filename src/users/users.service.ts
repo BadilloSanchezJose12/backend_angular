@@ -10,7 +10,7 @@ export class UsersService {
 constructor(@InjectRepository(UserEntity) private rep:Repository<UserEntity>){
 }
 
-async getAllUsers(): Promise <UserEntity[]> {
+async getAllUsers(): Promise<UserEntity[]> {
     return await this.rep.find();
 }
 

@@ -16,7 +16,7 @@ getAllUsers(){
 
 
 @Post()
-addUsers(@Body() user,UserEntity){
+addUsers(@Body() user:UserEntity){
     return this.service.createUser(user);
 }
 
